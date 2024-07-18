@@ -5,7 +5,7 @@
     justify-content: $space;
     gap: $gap;
 }
-@mixin textStyle($MB, $FS, $FW, $CLR, $LH, $CASE){
+@mixin TextStyle($MB, $FS, $FW, $CLR, $LH, $CASE){
     margin-bottom: $MB;
     font-size: $FS;
     font-weight: $FW;
