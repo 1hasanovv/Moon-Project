@@ -1,0 +1,102 @@
+.commander-body{
+    height: 100vh;
+    background-image: url(../../images/bacground-img.png);
+    z-index: 50;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.commander__site-header {
+    padding-top: 40px;
+}
+.container {
+}
+.commander__header {
+    @include Display($items:center, $space:space-between, $gap:0px)
+}
+.commander__wrapper {
+    @include Display($items:center, $space:start, $gap:0px);
+}
+.commander__wrapper > span{
+}
+.commander__header-list {
+    @include Display($items:center, $space:start, $gap:50px);
+    padding: 39px 0;
+    max-width: 830px;
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.04);
+}
+.commander__header-item {
+}
+.commander__header-item >span{
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:#FFFFFF, $LH:19.2px, $CASE:capitalize);
+}
+.commander__header-link {
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:#FFFFFF, $LH:19.2px, $CASE:capitalize);
+}
+.x{
+    border-bottom: 2px solid #FFFFFF;
+    padding: 0 100px 0 410px;
+    margin-right: 93px;
+    opacity: 0.25;
+}
+.s{
+}
+
+
+
+
+
+
+
+
+// hero section
+
+.commander__hero-section {
+    padding-top: 62px;
+}
+.container {
+}
+.commander__hero {
+    @include Display($items:start, $space:space-between, $gap:0px)
+}
+.commander__hero-wrapper {
+}
+.commander__hero-wrappers{
+    padding: 76px 0 154px 0;
+    @include textStyle($MB:0px, $FS:28px, $FW:400, $CLR:#FFFFFF, $LH:33.6px, $CASE:uppercase);
+
+}
+.hero__wrappers-color{
+    opacity: 25%;
+}
+.hero__wrappers{
+    margin-left: 24px;
+}
+.commander__hero-wrapper >strong{
+    @include textStyle($MB:15px, $FS:32px, $FW:400, $CLR:#FFFFFF, $LH:36.67px, $CASE:uppercase);
+    opacity: 50.42%;
+}
+.commander__hero-wrapper >h2{
+    @include textStyle($MB:27px, $FS:56px, $FW:400, $CLR:#FFFFFF, $LH:64.18px, $CASE:uppercase);
+}
+.commander__hero-wrapper >p{
+    max-width: 444px;
+    @include textStyle($MB:120px, $FS:18px, $FW:400, $CLR:#D0D6F9, $LH:32px, $CASE:capitalize);
+}
+.commander__hero-wrapper-bg{
+    display: flex;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #D3D3D3;
+    background-color: white;
+    position: relative;
+    gap: 24px;
+    opacity: 17%;
+    
+    &:hover{
+        background-color: #FFFFFF;
+    }
+}
