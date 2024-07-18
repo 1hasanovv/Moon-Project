@@ -7,40 +7,41 @@
     overflow: hidden;
 }
 .space__site-header {
+    padding:0 55px;
     padding-top:40px; 
 }
 .space__header {
     @include Display($items:center, $space:space-between, $gap:0px);
-    position: relative;
 }
 .space__header-logo-content {
     @include Display($items:center, $space:space-between, $gap:0px);
 }
 .space__header-logo-wrapper{
     display: inline-block;
-    position: absolute;
     top: 25px;
-    left: -64px;
+    left: 0;
     z-index: 2;
 }
 .space__header-line {
     width: 473px;
     border: 1px solid #ffff;
     opacity: 20%;
-    position: absolute;
     top: 47px;
-    left: 7%;
+    left: 167px;
     z-index: 5;
+}
+.space__header-list-wrapper{
+    width: 830px;
+    margin-left: 135px;
 }
 .space__header-list {
     padding: 39px 165px 0 123px;
-    backdrop-filter: blur(22px);
     @include Display($items:center, $space:start, $gap:48px);
-    background-color: #FFFFFF0A;
-    position: absolute;
+    backdrop-filter: blur(22px);
     top: 0;
-    right: -185px;
+    right: 0;
     z-index: 3;
+    background-color: #FFFFFF0A;
 }
 .space__header-item {
     position: relative;
@@ -80,6 +81,8 @@
 .space__header-item-link {
     padding-bottom: 40px;
     @include Display($items:center, $space:space-between, $gap:12px);
+    font-family: "Barlow Condensed";
+    
 }
 .space__header-item-link:nth-child(1){
     @include Display($items:center, $space:space-between, $gap:11px);
@@ -89,6 +92,7 @@
 }
 .space__header-item-number-span{
     @include TextStyle($MB:px, $FS:16px, $FW:700px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+    
 }
 .space__header-item-text-span{
     @include TextStyle($MB:px, $FS:16px, $FW:400px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
@@ -132,14 +136,14 @@
     }
     .space__header-list{
         padding: 39px 47px 0 ;
-        right: -20px;
+        right: 0;
     }
     .space__header-item-number-span{
         display: none;
     }
     .space__header-logo-content {
         top: 0;
-        left: -39px;
+        left: 0;
     }
 }
 // Mobile
@@ -152,7 +156,7 @@
         overflow: hidden;
     }
     .space__site-header {
-        padding-top:24px; 
+        padding: 0 55px;
     }
     .space__header{
         @include Display($items:center, $space:space-between, $gap:0px);
@@ -172,7 +176,7 @@
 // Hero section styles start
 
 .space__hero-section {
-    padding: 251px 0 131px;
+    padding: 151px 0 131px;
 }
 .space__hero {
     @include Display($items:center, $space:space-between, $gap:0px);
@@ -202,10 +206,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s all ;
+
+    &:hover{
+        background-color: $black-clr;
+    }
 }
 .space__hero-content-circle-text {
     @include TextStyle($MB:0px, $FS:32px, $FW:400, $CLR:$black-clr, $LH:37px, $CASE:inherit);
     position: absolute;
+    font-family: "Bellefair";
+    transition: 0.3s all linear;
+
+    &:hover{
+        color: $white-clr;
+    }
 }
 
 // Responsive
@@ -258,7 +273,6 @@
         position: absolute;
     }
 }
-
 // Media
 @media (max-width:570px){
     .space-body{
