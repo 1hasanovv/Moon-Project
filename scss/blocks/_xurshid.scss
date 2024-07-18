@@ -1,73 +1,187 @@
-.commander-body{
+// Header section styles start
+.space-body{
     height: 100vh;
-    background-image: url(../../images/bacground-img.png);
-    z-index: 50;
-    max-width: 100%;
+    background-image: url(../images/space-bg-img.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
 }
-.commander__site-header {
-    padding-top: 40px;
+.space__site-header {
+    padding:0 55px;
+    padding-top:40px; 
 }
-.container {
+.space__header {
+    @include Display($items:center, $space:space-between, $gap:0px);
 }
-.commander__header {
-    @include Display($items:center, $space:space-between, $gap:0px)
+.space__header-logo-content {
+    @include Display($items:center, $space:space-between, $gap:0px);
 }
-.commander__wrapper {
-    @include Display($items:center, $space:start, $gap:0px);
+.space__header-logo-wrapper{
+    display: inline-block;
+    top: 25px;
+    left: 0;
+    z-index: 2;
 }
-.commander__wrapper > span{
+.space__header-line {
+    width: 473px;
+    border: 1px solid #ffff;
+    opacity: 20%;
+    top: 47px;
+    left: 167px;
+    z-index: 5;
 }
-.commander__header-list {
-    @include Display($items:center, $space:start, $gap:50px);
-    padding: 39px 0;
-    max-width: 830px;
-    backdrop-filter: blur(50px);
-    background: rgba(255, 255, 255, 0.04);
+.space__header-list-wrapper{
+    width: 830px;
+    margin-left: 135px;
 }
-.commander__header-item {
+.space__header-list {
+    padding: 39px 165px 0 123px;
+    @include Display($items:center, $space:start, $gap:48px);
+    backdrop-filter: blur(22px);
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background-color: #FFFFFF0A;
 }
-.commander__header-item >span{
-    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:#FFFFFF, $LH:19.2px, $CASE:capitalize);
-}
-.commander__header-link {
-    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:#FFFFFF, $LH:19.2px, $CASE:capitalize);
-}
-.x{
-    border-bottom: 2px solid #FFFFFF;
-    padding: 0 100px 0 410px;
-    margin-right: 93px;
-    opacity: 0.25;
-}
-.s{
-}
+.space__header-item {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s all linear;
 
+    &::before{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        left: -100%;
+        bottom: 0;
+        transition: 0.3s all linear;
+    }
+    &:hover::before{
+        left: 0;
+    }
 
+    &::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        right : -100%;
+        bottom: 0; 
+        transition: 0.3s all linear;
+    }
 
+    &:hover::after{
+        right: 0;
+    }
 
+}
+.space__header-item-link {
+    padding-bottom: 40px;
+    @include Display($items:center, $space:space-between, $gap:12px);
+    font-family: "Barlow Condensed";
+    
+}
+.space__header-item-link:nth-child(1){
+    @include Display($items:center, $space:space-between, $gap:11px);
+}
+.space__header-item-link:nth-child(2){
+    @include Display($items:center, $space:space-between, $gap:14px);
+}
+.space__header-item-number-span{
+    @include TextStyle($MB:px, $FS:16px, $FW:700px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+    
+}
+.space__header-item-text-span{
+    @include TextStyle($MB:px, $FS:16px, $FW:400px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+}
+.space__header-menu-btn{
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+.space__header-hide-content{
+    display: none;
+}
+// Responsive start
 
+// Tablet
+@media(max-width:1110px){
+    .space__header-logo-wrapper{
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        z-index: 2;
+    }
+}
+@media(max-width:951px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__site-header {
+        padding-top:0; 
+    }
+    .space__header{
+        @include Display($items:center, $space:start, $gap:0px);
+    }
+    .space__header-line{
+        display: none;
+    }
+    .space__header-list{
+        padding: 39px 47px 0 ;
+        right: 0;
+    }
+    .space__header-item-number-span{
+        display: none;
+    }
+    .space__header-logo-content {
+        top: 0;
+        left: 0;
+    }
+}
+// Mobile
+@media (max-width:570px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__site-header {
+        padding: 0 55px;
+    }
+    .space__header{
+        @include Display($items:center, $space:space-between, $gap:0px);
+    }
+    .space__header-list{
+        display: none;
+    }
+    .space__header-menu-btn{
+        padding-top: 40px;
+        display: block;
 
-
-
+    }
+}
+// Header section styles end
 // hero section
 
 .commander__hero-section {
     padding-top: 62px;
 }
-.container {
-}
 .commander__hero {
     @include Display($items:start, $space:space-between, $gap:0px)
-}
-.commander__hero-wrapper {
 }
 .commander__hero-wrappers{
     padding: 76px 0 154px 0;
     @include textStyle($MB:0px, $FS:28px, $FW:400, $CLR:#FFFFFF, $LH:33.6px, $CASE:uppercase);
-
-}
-.hero__wrappers-color{
     opacity: 25%;
 }
 .hero__wrappers{

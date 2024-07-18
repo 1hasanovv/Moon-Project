@@ -9,40 +9,82 @@
 </head>
 <body class="commander-body commander">
 <!-- Xurshid commander__ page -->
-    <header class="commander__site-header">
-        <div class="container">
-            <div class="commander__header">
-                <div class="commander__wrapper">
-                    <img class="s" src="./images/site-logo.svg" alt="Site img">
-                    <div class="x"></div>
+    <header class="space__site-header">
+        <div class="space__header">
+            <div class="space__header-logo-content">
+                <div class="space__header-logo-wrapper">
+                    <img class="space__header-logo" src="./images/site-logo.svg" alt="site-logo" width="48" height="48">
                 </div>
-                <ul class="commander__header-list">
-                    <li class="commander__header-item">
-                        <a class="commander__header-link" href="./index.html">
-                            <span>00</span>
-                            <span>HOME</span>
+                <span class="space__header-line"></span>
+            </div>
+            <div class="space__header-list-wrapper">
+                <ul class="space__header-list">
+                    <li class="space__header-item">
+                        <a class="space__header-item-link" href="./index.html">
+                            <span class="space__header-item-number-span">00</span>
+                            <span class="space__header-item-text-span">HOME</span>
                         </a>
                     </li>
-                    <li class="commander__header-item">
-                        <a class="commander__header-link" href="./">
-                            <span>01</span>
-                            <span>DESTINATION</span>
+                    <li class="space__header-item">
+                        <a class="space__header-item-link" href="./isfandiyor.html">
+                            <span class="space__header-item-number-span">01</span>
+                            <span class="space__header-item-text-span">DESTINATION</span>
                         </a>
                     </li>
-                    <li class="commander__header-item">
-                        <a class="commander__header-link" href="./xurshid.html">
-                            <span>02</span>
-                            <span>CREW</span>
+                    <li class="space__header-item">
+                        <a class="space__header-item-link" href="./xurshid.html">
+                            <span class="space__header-item-number-span">02</span>
+                            <span class="space__header-item-text-span">CREW</span>
                         </a>
                     </li>
-                    <li class="commander__header-item">
-                        <a class="commander__header-link" href="./akbar.html">
-                            <span>03</span>
-                            <span>TECHNOLOGY</span>
+                    <li class="space__header-item">
+                        <a class="space__header-item-link" href="./akbar.html">
+                            <span class="space__header-item-number-span">03</span>
+                            <span class="space__header-item-text-span">TECHNOLOGY</span>
                         </a>
                     </li>
                 </ul>
             </div>
+            <button class="space__header-menu-btn" onclick="handleMenuBtnClick()">
+                <img src="./images/hamburger.svg" alt=" hamburger menu Icon" width="24" height="21">
+            </button>
+            </div>
+        </div>
+        <div class="space__header-hide-content">
+            <div class="space__header-hide-top">
+                <button  class="space__header-hide-top-btn" onclick="handleCloseModal()">
+                    <img src="./images/close-icon.svg" alt="Close Icon" width="19" height="19">
+                </button>
+            </div>
+            <ul class="space__header-hide-list">
+                <li class="space__header-hide-item">
+                    <a class="space__header-hide-item-link" href="">
+                        <div>
+                            <span class="space__hide-header-item-number-span">00</span>
+                            <span class="space__header-hide-hide-item-text-span">HOME</span>
+                        </div>
+                        <img src="./images/stick.svg" alt="stick-icon" width="4" height="31">
+                    </a>
+                </li>
+                <li class="space__header-hide-item">
+                    <a class="space__header-hide-item-link" href="">
+                        <span class="space__header-hide-item-number-span">01</span>
+                        <span class="space__header-hide-item-text-span">DESTINATION</span>
+                    </a>
+                </li>
+                <li class="space__header-hide-item">
+                    <a class="space__header-hide-item-link" href="">
+                        <span class="space__header-hide-item-number-span">02</span>
+                        <span class="space__header-hide-item-text-span">CREW</span>
+                    </a>
+                </li>
+                <li class="space__header-hide-item">
+                    <a class="space__header-hide-item-link" href="">
+                        <span class="space__header-hide-item-number-span">03</span>
+                        <span class="space__header-hide-item-text-span">TECHNOLOGY</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <main class="commander__site-main">
