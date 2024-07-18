@@ -1,0 +1,85 @@
+
+.launch__site-header {
+    padding: 40px;
+}
+.header__site-logo {
+    margin-left: 64px;
+}
+.launch__header {
+    @include Display($items:center, $space:space-between, $gap:93px);
+}
+.header__span {
+    width: 473px;
+    height: 1px;
+    color: $white-clr;
+    opacity: 25%;
+}
+.header__list {
+    width: 830px;
+    @include Display($items:center, $space:start, $gap:0px);
+    background-color: #FFFFFF0A;
+}
+.header__item {
+    padding: 39px;
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        width: 50%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        left: -100%;
+        bottom: 0;
+        transition: all 0.3s linear;
+    }
+    &::after{
+        content: "";
+        width: 50%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        right: -100%;
+        bottom: 0;
+        transition: all 0.3s linear;
+    }
+    &:hover::before{
+        left: 0;
+    }
+    &:hover::after{
+        right: 0;
+    }
+}
+.launch__hero-section {
+    padding: 76px 0 101px;
+}
+.container {
+}
+.launch__hero {
+}
+.launch__hero-subtitle {
+}
+.launch__hero-subspan {
+}
+.launch__hero-vehicle {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.launch__hero-list {
+}
+.launch__hero-item {
+}
+.launch__hero-info {
+    width: 470px;
+}
+.launch__hero-span {
+    @include textStyle($MB:11px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:19px, $CASE:capitalize);
+}
+.launch__hero-title {
+    @include textStyle($MB:17px, $FS:56px, $FW:400, $CLR:$white-clr, $LH:64px, $CASE:capitalize);
+}
+.launch__hero-text {
+}
+.launch__hero-img {
+}
