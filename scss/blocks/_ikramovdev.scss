@@ -1,0 +1,306 @@
+// Header section styles start
+.space-body{
+    height: 100vh;
+    background-image: url(../images/space-bg-img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.space__site-header {
+    padding-top:40px; 
+}
+.space__header {
+    @include Display($items:center, $space:space-between, $gap:0px);
+    position: relative;
+}
+.space__header-logo-content {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.space__header-logo-wrapper{
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: -64px;
+    z-index: 2;
+}
+.space__header-line {
+    width: 473px;
+    border: 1px solid #ffff;
+    opacity: 20%;
+    position: absolute;
+    top: 47px;
+    left: 7%;
+    z-index: 5;
+}
+.space__header-list {
+    padding: 39px 165px 0 123px;
+    backdrop-filter: blur(22px);
+    @include Display($items:center, $space:start, $gap:48px);
+    background-color: #FFFFFF0A;
+    position: absolute;
+    top: 0;
+    right: -185px;
+    z-index: 3;
+}
+.space__header-item {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s all linear;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        left: -100%;
+        bottom: 0;
+        transition: 0.3s all linear;
+    }
+    &:hover::before{
+        left: 0;
+    }
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: $white-clr;
+        right : -100%;
+        bottom: 0; 
+        transition: 0.3s all linear;
+    }
+
+    &:hover::after{
+        right: 0;
+    }
+
+}
+.space__header-item-link {
+    padding-bottom: 40px;
+    @include Display($items:center, $space:space-between, $gap:12px);
+}
+.space__header-item-link:nth-child(1){
+    @include Display($items:center, $space:space-between, $gap:11px);
+}
+.space__header-item-link:nth-child(2){
+    @include Display($items:center, $space:space-between, $gap:14px);
+}
+.space__header-item-number-span{
+    @include TextStyle($MB:px, $FS:16px, $FW:700px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+}
+.space__header-item-text-span{
+    @include TextStyle($MB:px, $FS:16px, $FW:400px, $CLR:$white-clr, $LH:19px, $CASE:capitalize);
+}
+.space__header-menu-btn{
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+.space__header-hide-content{
+    display: none;
+}
+// Responsive start
+
+// Tablet
+@media(max-width:1110px){
+    .space__header-logo-wrapper{
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        z-index: 2;
+    }
+}
+@media(max-width:951px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__site-header {
+        padding-top:0; 
+    }
+    .space__header{
+        @include Display($items:center, $space:start, $gap:0px);
+    }
+    .space__header-line{
+        display: none;
+    }
+    .space__header-list{
+        padding: 39px 47px 0 ;
+        right: -20px;
+    }
+    .space__header-item-number-span{
+        display: none;
+    }
+    .space__header-logo-content {
+        top: 0;
+        left: -39px;
+    }
+}
+// Mobile
+@media (max-width:570px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__site-header {
+        padding-top:24px; 
+    }
+    .space__header{
+        @include Display($items:center, $space:space-between, $gap:0px);
+    }
+    .space__header-list{
+        display: none;
+    }
+    .space__header-menu-btn{
+        padding-top: 40px;
+        display: block;
+
+    }
+}
+// Header section styles end
+
+
+// Hero section styles start
+
+.space__hero-section {
+    padding: 251px 0 131px;
+}
+.space__hero {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.space__hero-content {
+    max-width: 450px;
+}
+.space__hero-content-top-text {
+    @include TextStyle($MB:24px, $FS:28px, $FW:400, $CLR:$text-clr, $LH:34px, $CASE:capitalize);
+    font-family: "Barlow Condensed";
+}
+.space__hero-content-title {
+    @include TextStyle($MB:24px, $FS:150px, $FW:400, $CLR:$white-clr, $LH:172px, $CASE:capitalize);
+    font-family: "Bellefair";
+}
+.space__hero-content-text {
+    @include TextStyle($MB:0px, $FS:18px, $FW:400, $CLR:$text-clr, $LH:32px, $CASE:inherit);
+    font-family: "Barlow";
+}
+.space__hero-content-circle {
+    width: 274px;
+    height: 274px;
+    margin-top: 103px;
+    border-radius: 50%;
+    background-color: $white-clr;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.space__hero-content-circle-text {
+    @include TextStyle($MB:0px, $FS:32px, $FW:400, $CLR:$black-clr, $LH:37px, $CASE:inherit);
+    position: absolute;
+}
+
+// Responsive
+
+// Tablet
+@media(max-width:951px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__hero-section{
+        padding:106px 0 90px;
+    }
+    .space__hero{
+        @include Display($items:center, $space:start, $gap:156px);
+        flex-direction: column;
+    }
+    .space__hero-content{
+        padding-top: 106px;
+        text-align: center;
+    }
+    .space__hero-content-top-text {
+        @include TextStyle($MB:24px, $FS:20px, $FW:400, $CLR:$text-clr, $LH:24px, $CASE:capitalize);
+        font-family: "Barlow Condensed";
+    }
+    .space__hero-content-title {
+        @include TextStyle($MB:24px, $FS:150px, $FW:400, $CLR:$white-clr, $LH:150px, $CASE:capitalize);
+        font-family: "Bellefair";
+    }
+    .space__hero-content-text {
+        @include TextStyle($MB:0px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+        font-family: "Barlow";
+    }
+    .space__hero-content-circle {
+        width: 242px;
+        height: 242px;
+        margin-top: 103px;
+        border-radius: 50%;
+        background-color: $white-clr;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .space__hero-content-circle-text {
+        @include TextStyle($MB:0px, $FS:32px, $FW:400, $CLR:$black-clr, $LH:37px, $CASE:inherit);
+        position: absolute;
+    }
+}
+
+// Media
+@media (max-width:570px){
+    .space-body{
+        height: 100vh;
+        background-image: url(../images/space-mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .space__hero-section{
+        padding: 48px 0;
+    }
+    .space__hero{
+        @include Display($items:center, $space:start, $gap:11px);
+        flex-direction: column;
+    }
+    .space__hero-content {
+        padding-top: 0px;
+        max-width: 327px;
+    }
+    .space__hero-content-top-text {
+        @include TextStyle($MB:24px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:19px, $CASE:capitalize);
+        font-family: "Barlow Condensed";
+    }
+    .space__hero-content-title {
+        @include TextStyle($MB:24px, $FS:80px, $FW:400, $CLR:$white-clr, $LH:100px, $CASE:capitalize);
+        font-family: "Bellefair";
+    }
+    .space__hero-content-text {
+        @include TextStyle($MB:0px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:25px, $CASE:inherit);
+        font-family: "Barlow";
+    }
+    .space__hero-content-circle {
+        width: 150px;
+        height: 150px;
+        margin-top: 103px;
+        border-radius: 50%;
+        background-color: $white-clr;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+// Hero section styles end
